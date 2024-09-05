@@ -1,0 +1,236 @@
+/* Reset some default styles */
+body, h1, h2, p, a, img, video, section, div, header, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gradia', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #004d40;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Parallax and scroll effect styles */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    background-image: url('hero-bg.jpg');
+}
+
+.background-1 {
+    background-image: url('bg1.jpg');
+}
+
+.background-2 {
+    background-image: url('bg2.jpg');
+}
+
+.scroll-text {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Section styles */
+#about, #services, #gallery, #contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Service styles */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Gallery styles */
+.gallery-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    position: absolute;
+    right: 50%;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 400px;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures the content is scaled and centered properly */
+
+}
+
+/* Video responsiveness */
+.landscape-video video,
+.portrait-video video {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit the height of the video */
+    border-radius: 5px;
+    object-fit: contain; /* Ensures the content is scaled and centered properly */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Hide all gallery items by default */
+.gallery-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 600px; /* Adjust to fit your design */
+}
+
+/* Show active slide */
+.active {
+    display: block;
+}
+
+/* Fading animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Button styles */
+.gallery-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-button {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #ffffff;
+    color: #004d40;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .gallery-section {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact button */
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #004d40;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ffffff;
+    color: #004d40;
+}
+
+/* Fade-in effect for scrolling */
+.fade-in {
+    opacity: 1 !important;
+}
